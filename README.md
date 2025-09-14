@@ -62,6 +62,51 @@ pnpm start
 | `pnpm lint` | 代码检查 |
 | `pnpm clean` | 清理构建文件 |
 
+## 📦 发布到 npm
+
+### 🎯 交互式发布（推荐）
+
+```bash
+# 完整交互式发布工具
+./publish-interactive.sh
+
+# 基础交互式发布
+./publish.sh
+
+# 简化交互式发布
+./publish-simple.sh
+```
+
+### 命令行发布
+
+```bash
+# 发布单个包
+./publish.sh shared    # 发布 @smilez/shared-utils
+./publish.sh test      # 发布 @smilez/test-utils
+
+# 发布所有包
+./publish.sh all
+
+# 使用简化版脚本
+./publish-simple.sh shared
+```
+
+### 发布前准备
+
+1. **登录 npm**
+   ```bash
+   npm login
+   ```
+
+2. **检查包配置**
+   ```bash
+   # 确保包名和版本正确
+   cat packages/shared/package.json
+   cat packages/test/package.json
+   ```
+
+详细说明请查看 [PUBLISH.md](./PUBLISH.md)
+
 
 ## ⚖️ Monorepo 的优缺点
 

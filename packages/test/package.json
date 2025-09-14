@@ -1,0 +1,28 @@
+{
+   "name": "@smilez/test-utils",
+  "version": "1.0.0",
+  "description": "Test utilities and debugging functions",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "README.md"
+  ],
+  "keywords": [
+    "test",
+    "utilities",
+    "debug",
+    "logging"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Smile-zxx/monorepo.git",
+    "directory": "packages/test"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

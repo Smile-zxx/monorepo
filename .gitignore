@@ -3,6 +3,8 @@ node_modules/
 .pnpm-store/
 
 # Build outputs
+configs/
+
 dist/
 build/
 *.tsbuildinfo
@@ -100,3 +102,5 @@ temp/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+

@@ -1,9 +1,29 @@
 {
-  "name": "@cursor-monorepo/shared",
+  "name": "@smilez/shared-utils",
   "version": "1.0.0",
-  "description": "Shared utilities and types",
+  "description": "Shared utilities and types for monorepo",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "utilities",
+    "types",
+    "shared",
+    "monorepo"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Smile-zxx/monorepo.git",
+    "directory": "packages/shared"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
