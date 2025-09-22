@@ -9,6 +9,9 @@
     "dev": "tsc --watch",
     "test": "echo \"No test specified\" && exit 0"
   },
+  "dependencies": {
+    "@smilez/mylru": "workspace:*"
+  },
   "author": "",
   "license": "MIT"
 }
