@@ -1,0 +1,14 @@
+{
+  "name": "@smilez/mylru",
+  "version": "0.1.0",
+  "description": "lru缓存",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "author": "smilez",
+  "license": "MIT"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@smilez/cachereq",
+  "version": "0.1.0",
+  "description": "缓存req",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "author": "",
+  "license": "MIT"
+}
