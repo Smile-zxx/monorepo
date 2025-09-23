@@ -73,7 +73,33 @@ async function main() {
         `# @smileznpm/${name}\n\n${desc}\n`
     );
 
+    // 创建 tsconfig.json
+    const tsconfig = {
+        "compilerOptions": {
+            "target": "ES2020",
+            "module": "CommonJS",
+            "lib": ["ES2020"],
+            "outDir": "./dist",
+            "rootDir": "./src",
+            "strict": true,
+            "esModuleInterop": true,
+            "skipLibCheck": true,
+            "forceConsistentCasingInFileNames": true,
+            "declaration": true,
+            "declarationMap": true,
+            "sourceMap": true
+        },
+        "include": ["src/**/*"],
+        "exclude": ["node_modules", "dist"]
+    };
+
+    fs.writeFileSync(
+        path.join(pkgPath, 'tsconfig.json'),
+        JSON.stringify(tsconfig, null, 2)
+    );
+
     console.log(`包已创建：packages/${name}`);
+    console.log('已自动创建 tsconfig.json 文件');
     console.log('请根据需要补充 package.json 和实现代码。');
 }
 
