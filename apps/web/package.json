@@ -10,8 +10,8 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@cursor-monorepo/shared": "workspace:*",
-    "@cursor-monorepo/test": "workspace:*"
+    "@smileznpm/shared": "workspace:*",
+    "@smileznpm/test": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.3.0",

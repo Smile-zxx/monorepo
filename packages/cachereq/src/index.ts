@@ -1,5 +1,5 @@
 // 缓存req 入口
-import LRUCache from '@smilez/mylru';
+import LRUCache from '@smileznpm/mylru';
 
 /**
  * 基于 LRUCache 实现的带缓存的 request 方法

@@ -17,10 +17,10 @@ importers:
 
   apps/web:
     dependencies:
-      '@cursor-monorepo/shared':
+      '@smileznpm/shared':
         specifier: workspace:*
         version: link:../../packages/shared
-      '@cursor-monorepo/test':
+      '@smileznpm/test':
         specifier: workspace:*
         version: link:../../packages/test
     devDependencies:
@@ -31,7 +31,17 @@ importers:
         specifier: ^5.3.0
         version: 5.9.2
 
-  packages/mylru: {}
+  packages/cachereq:
+    dependencies:
+      '@smileznpm/mylru':
+        specifier: workspace:*
+        version: link:../mylru
+
+  packages/mylru:
+    devDependencies:
+      typescript:
+        specifier: ^5.3.0
+        version: 5.9.2
 
   packages/shared:
     devDependencies:

@@ -73,8 +73,8 @@ npm login
 
 | 包名 | 目录 | npm 包名 | 描述 |
 |------|------|----------|------|
-| shared | `packages/shared` | `@smilez/shared-utils` | 共享工具和类型 |
-| test | `packages/test` | `@smilez/test-utils` | 测试工具和调试函数 |
+| shared | `packages/shared` | `@smileznpm/shared-utils` | 共享工具和类型 |
+| test | `packages/test` | `@smileznpm/test-utils` | 测试工具和调试函数 |
 
 ## 🔧 发布前检查
 
@@ -122,7 +122,7 @@ npm login
 
 ### 3. 权限问题
 
-确保你的 npm 账户有发布权限，特别是对于 scoped packages (`@smilez/`)。
+确保你的 npm 账户有发布权限，特别是对于 scoped packages (`@smileznpm/`)。
 
 ### 4. 网络问题
 
@@ -142,12 +142,12 @@ npm config set registry https://registry.npmjs.org/
 
 ```bash
 # 查看包信息
-npm view @smilez/shared-utils
-npm view @smilez/test-utils
+npm view @smileznpm/shared-utils
+npm view @smileznpm/test-utils
 
 # 安装测试
-npm install @smilez/shared-utils
-npm install @smilez/test-utils
+npm install @smileznpm/shared-utils
+npm install @smileznpm/test-utils
 ```
 
 ## 🔄 版本管理

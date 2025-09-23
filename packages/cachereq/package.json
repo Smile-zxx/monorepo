@@ -1,5 +1,5 @@
 {
-  "name": "@smilez/cachereq",
+  "name": "@smileznpm/cachereq",
   "version": "0.1.0",
   "description": "缓存req",
   "main": "dist/index.js",
@@ -10,7 +10,7 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
-    "@smilez/mylru": "workspace:*"
+    "@smileznpm/mylru": "workspace:*"
   },
   "author": "",
   "license": "MIT"

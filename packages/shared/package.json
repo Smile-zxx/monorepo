@@ -1,5 +1,5 @@
 {
-  "name": "@smilez/shared-utils",
+  "name": "@smileznpm/shared",
   "version": "1.0.0",
   "description": "Shared utilities and types for monorepo",
   "main": "dist/index.js",

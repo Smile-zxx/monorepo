@@ -41,8 +41,8 @@ async function main() {
     fs.mkdirSync(path.join(pkgPath, 'src'));
 
     const pkgJson = {
-        name: `@smilez/${name}`,
-        version: "0.1.0",
+        name: `@smileznpm/${name}`,
+        version: "0.0.1",
         description: desc || "",
         main: "dist/index.js",
         types: "dist/index.d.ts",
@@ -52,7 +52,10 @@ async function main() {
             test: "echo \"No test specified\" && exit 0"
         },
         author: author || "",
-        license: "MIT"
+        license: "MIT",
+        "devDependencies": {
+            "typescript": "^5.3.0"
+        }
     };
 
     fs.writeFileSync(
@@ -67,7 +70,7 @@ async function main() {
 
     fs.writeFileSync(
         path.join(pkgPath, 'README.md'),
-        `# @cursor-monorepo/${name}\n\n${desc}\n`
+        `# @smileznpm/${name}\n\n${desc}\n`
     );
 
     console.log(`包已创建：packages/${name}`);

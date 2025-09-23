@@ -1,4 +1,4 @@
-# @smilez/mylru
+# @smileznpm/mylru
 
 > 轻量级浏览器端 LRU 缓存，自动在 LocalStorage 与 IndexedDB 间切换，支持过期、容量控制与持久化。
 
@@ -15,13 +15,13 @@
 
 ```bash
 # npm
-npm i @smilez/mylru
+npm i @smileznpm/mylru
 
 # pnpm
-pnpm add @smilez/mylru
+pnpm add @smileznpm/mylru
 
 # yarn
-yarn add @smilez/mylru
+yarn add @smileznpm/mylru
 ```
 
 > 注意：该库依赖浏览器环境（`localStorage` / `indexedDB`）。SSR/Node 环境请在客户端再导入或做运行时判断。
@@ -29,7 +29,7 @@ yarn add @smilez/mylru
 ## 快速上手
 
 ```ts
-import LRUCache from '@smilez/mylru';
+import LRUCache from '@smileznpm/mylru';
 
 // 方式一：单例（推荐）
 const cache = LRUCache.getInstance({
@@ -101,7 +101,7 @@ class LRUCache<T = any> {
 ## 示例：结合过期与容量控制
 
 ```ts
-import LRUCache from '@smilez/mylru';
+import LRUCache from '@smileznpm/mylru';
 
 const cache = LRUCache.getInstance({
   maxCacheNum: 20,
@@ -132,4 +132,4 @@ for (let i = 0; i < 100; i++) {
 
 ## 许可证
 
-MIT © 2025-present `smilez`
+MIT © 2025-present `smileznpm`

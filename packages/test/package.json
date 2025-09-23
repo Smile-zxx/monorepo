@@ -1,5 +1,5 @@
 {
-   "name": "@smilez/test-utils",
+   "name": "@smileznpm/test",
   "version": "1.0.0",
   "description": "Test utilities and debugging functions",
   "main": "index.js",

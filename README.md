@@ -81,8 +81,8 @@ pnpm start
 
 ```bash
 # 发布单个包
-./publish.sh shared    # 发布 @smilez/shared-utils
-./publish.sh test      # 发布 @smilez/test-utils
+./publish.sh shared    # 发布 @smileznpm/shared-utils
+./publish.sh test      # 发布 @smileznpm/test-utils
 
 # 发布所有包
 ./publish.sh all

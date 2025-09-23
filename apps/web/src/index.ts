@@ -1,4 +1,4 @@
-import { greet, add, createUser, User } from '@cursor-monorepo/shared';
+import { greet, add, createUser, User } from '@smileznpm/shared-utils';
 import { consoleLog, debugLog, testFunction, addNumbers, createTestConfig } from '@cursor-monorepo/test';
 
 console.log(greet('World'));

@@ -4,6 +4,18 @@ const readline = require('readline');
 const { execSync } = require('child_process');
 
 /**
+ * 读取 NPM token
+ */
+function getNpmToken() {
+    const tokenPath = path.resolve(__dirname, '../configs/npmtoken');
+    if (!fs.existsSync(tokenPath)) {
+        console.error('未找到 NPM token 文件: configs/npmtoken');
+        process.exit(1);
+    }
+    return fs.readFileSync(tokenPath, 'utf8').trim();
+}
+
+/**
  * 获取 packages 目录下所有包名
  */
 function getAllPackages() {
@@ -65,7 +77,16 @@ function askSelect(packages) {
  */
 function publishPackage(pkg) {
     const pkgPath = path.resolve(__dirname, '../packages', pkg.dir);
-    console.log(`\n正在发布: ${pkg.name} (${pkg.version})`);
+    const pkgJsonPath = path.join(pkgPath, 'package.json');
+    const pkgJson = JSON.parse(fs.readFileSync(pkgJsonPath, 'utf8'));
+
+    // 计算下一个 patch 版本
+    const [major, minor, patch] = String(pkgJson.version || '0.0.0').split('.').map(n => parseInt(n, 10) || 0);
+    const nextVersion = `${major}.${minor}.${patch + 1}`;
+    pkgJson.version = nextVersion;
+    fs.writeFileSync(pkgJsonPath, JSON.stringify(pkgJson, null, 2));
+
+    console.log(`\n正在发布: ${pkg.name} (${pkg.version} -> ${nextVersion})`);
     try {
         execSync('pnpm build', { cwd: pkgPath, stdio: 'inherit' });
     } catch (e) {
@@ -73,8 +94,9 @@ function publishPackage(pkg) {
         return;
     }
     try {
-        execSync('npm publish --access public', { cwd: pkgPath, stdio: 'inherit' });
-        console.log(`✅ 发布成功: ${pkg.name}@${pkg.version}`);
+        const npmToken = getNpmToken();
+        execSync(`NPM_TOKEN=${npmToken} npm publish --access public`, { cwd: pkgPath, stdio: 'inherit' });
+        console.log(`✅ 发布成功: ${pkg.name}@${nextVersion}`);
     } catch (e) {
         console.error(`❌ 发布失败: ${pkg.name}`);
     }

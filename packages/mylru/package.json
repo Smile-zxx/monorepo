@@ -1,6 +1,6 @@
 {
-  "name": "@smilez/mylru",
-  "version": "0.1.0",
+  "name": "@smileznpm/mylru",
+  "version": "0.0.3",
   "description": "lru缓存",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -9,6 +9,9 @@
     "dev": "tsc --watch",
     "test": "echo \"No test specified\" && exit 0"
   },
-  "author": "smilez",
+  "devDependencies": {
+    "typescript": "^5.3.0"
+  },
+  "author": "smileznpm",
   "license": "MIT"
 }

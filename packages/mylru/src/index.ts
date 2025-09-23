@@ -116,8 +116,8 @@ class LRUCache<T = any> {
     private async initIndexedDB() {
         return new Promise<void>((resolve, reject) => {
             const req = indexedDB.open(this.dbName, 1);
-            req.onupgradeneeded = (e) => {
-                const db = (e.target as IDBOpenDBRequest).result;
+            req.onupgradeneeded = (e: IDBVersionChangeEvent) => {
+                const db = (req as IDBOpenDBRequest).result;
                 if (!db.objectStoreNames.contains(this.storeName)) {
                     db.createObjectStore(this.storeName, { keyPath: 'key' });
                 }
@@ -157,7 +157,9 @@ class LRUCache<T = any> {
         }
         while (this.cacheMap.size > this.maxCacheNum) {
             // LRU: Map的第一个就是最久未使用的
-            const firstKey = this.cacheMap.keys().next().value;
+            const iter = this.cacheMap.keys().next();
+            if (iter.done) break;
+            const firstKey = iter.value as string;
             const item = this.cacheMap.get(firstKey);
             if (item) {
                 this.totalSize -= item.size;
