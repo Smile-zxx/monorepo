@@ -7,17 +7,24 @@
     "build": "pnpm -r build",
     "publish": "sh ./ publish-interactive.sh",
     "dev": "pnpm -r dev",
-    "test": "pnpm -r test",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:packages": "pnpm -r test",
     "lint": "pnpm -r lint",
     "clean": "pnpm -r clean",
     "addpkg": "node repoTools/addNewPackage.js",
     "pubpkg": "node repoTools/publishPackage.js",
-    "install-tb": "pnpm install --registry=https://registry.npm.taobao.org",
+    "install-tb": "pnpm install --registry=https://registry.npmmirror.com",
     "start-admin": "pnpm --filter @smileznpm/admin dev"
   },
   "devDependencies": {
     "typescript": "^5.3.0",
-    "@types/node": "^20.10.0"
+    "@types/node": "^20.10.0",
+    "@types/jest": "^29.5.8",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "jest-environment-jsdom": "^29.7.0"
   },
   "engines": {
     "node": ">=18.0.0",
