@@ -3,6 +3,7 @@ import { RouteObject } from 'react-router-dom'
 import Dashboard from '../pages/Dashboard'
 import Users from '../pages/Users'
 import Settings from '../pages/Settings'
+import ErrorBoundary from '../pages/ErrorBoundary'
 
 // 路由配置
 export const routeConfig = [
@@ -33,6 +34,11 @@ export const routeConfig = [
     "title": "系统设置",
     "icon": "IconSettings",
     "showInMenu": true
+  }, {
+    "path": "/ErrorBoundary",
+    "element": "ErrorBoundary",
+    "title": "ErrorBoundary",
+    "showInMenu": true
   }
 ]
 
@@ -40,7 +46,8 @@ export const routeConfig = [
 const componentMap = {
   Dashboard,
   Users,
-  Settings
+  Settings,
+  ErrorBoundary
 }
 
 // 生成路由对象
