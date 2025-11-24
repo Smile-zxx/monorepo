@@ -15,6 +15,7 @@
     "clean": "pnpm -r clean",
     "addpkg": "node repoTools/addNewPackage.js",
     "pubpkg": "node repoTools/publishPackage.js",
+    "coco": "node repoTools/coco.js",
     "install-tb": "pnpm install --registry=https://registry.npmmirror.com",
     "start-admin": "pnpm --filter @smileznpm/admin dev"
   },

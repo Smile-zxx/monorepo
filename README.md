@@ -1,3 +1,35 @@
+## COCO CLI
+
+一个基于 LLM 的任务编排 CLI：`repoTools/coco.js`。
+
+### 运行
+
+```bash
+pnpm coco --help
+pnpm coco --list-tools
+pnpm coco "在 apps/admin 下执行 pnpm dev 并输出日志"
+pnpm coco --tool shell --input '{"command":"echo hello"}'
+```
+
+### 环境变量
+
+- `COCO_LLM_API_KEY` 或 `OPENAI_API_KEY`
+- `COCO_LLM_BASE_URL`（可选，默认 `https://api.openai.com/v1`）
+- `COCO_LLM_MODEL`（可选，默认 `gpt-4o-mini`）
+
+### 自定义工具
+
+在 `repoTools/tools/` 目录新增 JS 文件，导出：
+
+```js
+module.exports = {
+  name: 'echo',
+  description: '打印输入文本',
+  schema: { /* JSON Schema */ },
+  run: async (input, ctx) => ({ ok: true })
+}
+```
+
 # Cursor Monorepo
 
 这是一个基于 pnpm 的 monorepo 项目，包含共享包和应用程序。
