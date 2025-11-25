@@ -4,6 +4,7 @@ import Dashboard from '../pages/Dashboard'
 import Users from '../pages/Users'
 import Settings from '../pages/Settings'
 import ErrorBoundary from '../pages/ErrorBoundary'
+import Notes from '../pages/Notes'
 
 // 路由配置
 export const routeConfig = [
@@ -39,6 +40,12 @@ export const routeConfig = [
     "element": "ErrorBoundary",
     "title": "ErrorBoundary",
     "showInMenu": true
+  },
+  {
+    "path": "/notes",
+    "element": "Notes",
+    "title": "Notes",
+    "showInMenu": true
   }
 ]
 
@@ -47,7 +54,8 @@ const componentMap = {
   Dashboard,
   Users,
   Settings,
-  ErrorBoundary
+  ErrorBoundary,
+  Notes
 }
 
 // 生成路由对象
