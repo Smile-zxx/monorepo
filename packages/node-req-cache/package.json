@@ -1,0 +1,17 @@
+{
+  "name": "@smileznpm/node-req-cache",
+  "version": "0.0.1",
+  "description": "node-req-cache",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "jest"
+  },
+  "author": "zhang",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.3.0"
+  }
+}
