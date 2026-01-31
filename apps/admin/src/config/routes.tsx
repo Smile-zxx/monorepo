@@ -5,6 +5,7 @@ import Users from '../pages/Users'
 import Settings from '../pages/Settings'
 import ErrorBoundary from '../pages/ErrorBoundary'
 import Notes from '../pages/Notes'
+import RemotePage from '../pages/RemotePage'
 
 // 路由配置
 export const routeConfig = [
@@ -46,6 +47,12 @@ export const routeConfig = [
     "element": "Notes",
     "title": "Notes",
     "showInMenu": true
+  },
+  {
+    "path": "/remote",
+    "element": "RemotePage",
+    "title": "远程组件",
+    "showInMenu": true
   }
 ]
 
@@ -55,7 +62,8 @@ const componentMap = {
   Users,
   Settings,
   ErrorBoundary,
-  Notes
+  Notes,
+  RemotePage
 }
 
 // 生成路由对象
