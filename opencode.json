@@ -1,0 +1,61 @@
+{
+    "$schema": "https://opencode.ai/config.json",
+    "provider": {
+        "dmxapi-anthropic": {
+            "npm": "@ai-sdk/anthropic",
+            "name": "DMXAPI Claude",
+            "options": {
+                "baseURL": "https://www.dmxapi.com/v1",
+                "apiKey": "sk-cxCwXZKjEqQ13CFM3RX5MX5tnVlOQaYGJVnHmL92GndcNEjY"
+            },
+            "models": {
+                "claude-opus-4-5-20251101": {
+                    "name": "claude-opus-4-5-20251101"
+                }
+            }
+        },
+        "dmxapi-google": {
+            "npm": "@ai-sdk/google",
+            "name": "DMXAPI Gemini",
+            "options": {
+                "baseURL": "https://www.dmxapi.com/v1",
+                "apiKey": "sk-cxCwXZKjEqQ13CFM3RX5MX5tnVlOQaYGJVnHmL92GndcNEjY"
+            },
+            "models": {
+                "gemini-2.5-pro": {
+                    "name": "gemini-2.5-pro"
+                }
+            }
+        },
+        "dmxapi-openai": {
+            "npm": "@ai-sdk/openai-compatible",
+            "name": "DMXAPI OpenAI",
+            "options": {
+                "baseURL": "https://www.dmxapi.com/v1",
+                "apiKey": "sk-cxCwXZKjEqQ13CFM3RX5MX5tnVlOQaYGJVnHmL92GndcNEjY"
+            },
+            "models": {
+                "DeepSeek-V3": {
+                    "name": "DeepSeek-V3"
+                }
+            }
+        },
+        "dmxapi-douao": {
+            "npm": "@ai-sdk/openai-compatible",
+            "name": "DMXAPI OpenAI",
+            "options": {
+                "baseURL": "https://www.dmxapi.com/v1",
+                "apiKey": "sk-cxCwXZKjEqQ13CFM3RX5MX5tnVlOQaYGJVnHmL92GndcNEjY"
+            },
+            "models": {
+                "Doubao-lite-128k": {
+                    "name": "Doubao-lite-128k",
+                    "limit": {
+                        "context": 12288,
+                        "output": 12288
+                    }
+                }
+            }
+        }
+    }
+}
